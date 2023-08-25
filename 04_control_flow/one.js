@@ -40,7 +40,7 @@ const debitCard = true
 const loggedinfromGoogle = false
 const loggedinfromEmail = true
 
-if (userLoggedIn && debitCard) {
+if (userLoggedIn && debitCard && 2==3) {
     console.log("Student can buy Course");
 }
 
