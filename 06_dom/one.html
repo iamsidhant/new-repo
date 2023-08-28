@@ -30,3 +30,27 @@
     </div>
 </body>
 </html>
+
+
+<!-- We can convert a NodeList and HTMLCollection to an array using the `Array.from()` method or the spread operator (`...`). Here are two examples: -->
+
+// Using Array.from()
+<!-- let myNodeList = document.querySelectorAll('div');
+let myArray = Array.from(myNodeList); -->
+
+// Using the spread operator
+<!-- let myNodeList = document.querySelectorAll('div');
+let myArray = [...myNodeList]; -->
+
+
+
+// Using Array.from()
+<!-- let myHTMLCollection = document.getElementsByTagName('div');
+let myArray = Array.from(myHTMLCollection); -->
+
+// Using the spread operator
+<!-- let myHTMLCollection = document.getElementsByTagName('div');
+let myArray = [...myHTMLCollection]; -->
+
+
+<!-- After changing NodeList or HTMLCollection into a new array containing all the elements from that NodeList/HTMLCollection. We can then use array methods like `map`, `filter`, and `reduce` on the new array -->
