@@ -54,3 +54,58 @@ promiseFour
 
 
 
+const promiseFive = new Promise(function(resolve, reject) {
+    setTimeout(function(){
+        let error = true
+        if (!error) {
+            resolve({username: "javascript", password: "123"})
+        } else {
+            reject("ERROR: JS went wrong")
+        }
+    }, 1000);
+})
+
+async function consumePromiseFive(){
+    try {
+        const reponse = await promiseFive
+        console.log(reponse);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+consumePromiseFive()
+
+// async function getAllUsers(){
+//     try {
+//         const response = await fetch('https://jsonplaceholder.typicode.com/users')
+//         const data = await response.json()
+//         console.log(data);
+//     } catch (error) {
+//         console.log("E: ", error);
+//     }
+// }
+
+// getAllUsers()
+
+fetch('https://api.github.com/users/iamsidhant')
+.then((response) => {
+    return response.json()
+})
+.then((data) => {
+    console.log(data);
+})
+.catch(() => console.log(error))
+
+
+// promise.all
+const promise1 = Promise.resolve(3);
+const promise2 = 42;
+const promise3 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 100, 'yahoo');
+});
+
+Promise.all([promise1, promise2, promise3]).then((values) => {
+  console.log(values);
+});
+// Expected output: Array [3, 42, "yahoo"]
