@@ -22,7 +22,7 @@ function User(username, logCount, signedIn){
     this.signedIn = signedIn;
 
     this.greeting = function(){
-        console.log(`Welcome {this.username}`);
+        console.log(`Welcome ${this.username}`);
     }
     return this
 }
